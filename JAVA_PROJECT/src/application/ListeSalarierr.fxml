@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="861.0" prefWidth="1108.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Service">
+   <children>
+      <TableView fx:id="tableau" layoutX="53.0" layoutY="293.0" prefHeight="385.0" prefWidth="746.0">
+         <columns>
+            <TableColumn fx:id="colMatricule" prefWidth="143.0" sortType="DESCENDING" text="matriculeE" />
+            <TableColumn fx:id="colNom" minWidth="5.0" prefWidth="180.0" text="nom" />
+            <TableColumn fx:id="colEmail" prefWidth="271.0" text="Email" />
+            <TableColumn fx:id="colSalaire" prefWidth="164.0" text="Salaire" />
+         </columns>
+      </TableView>
+      <Button fx:id="ajouter" layoutX="200.0" layoutY="696.0" mnemonicParsing="false" onAction="#ajout" prefHeight="31.0" prefWidth="145.0" text="Ajouter" textFill="#3c10eb">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Button fx:id="modifier" layoutX="400.0" layoutY="696.0" mnemonicParsing="false" onAction="#modifier" prefHeight="31.0" prefWidth="145.0" text="Modifier" textFill="#3b8d46">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Button>
+      <Button fx:id="supprimer" layoutX="607.0" layoutY="696.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="31.0" prefWidth="170.0" text="Supprimer" textFill="#da1212">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Button fx:id="ListerparSalaire" layoutX="537.0" layoutY="817.0" mnemonicParsing="false" onAction="#ListerparSalaire" prefHeight="39.0" prefWidth="183.0" text="ListerparSalaire" textFill="#c8d027">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Button layoutX="127.0" layoutY="758.0" mnemonicParsing="false" onAction="#listerLesEmploye" prefHeight="39.0" prefWidth="227.0" text="Lister les employes" textFill="#d0169b">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Button>
+      <Button fx:id="ListerparAnciennet" layoutX="258.0" layoutY="817.0" mnemonicParsing="false" onAction="#listerParAncienette" text="ListerparAncienneté" textFill="#2491d0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Button>
+      <Button fx:id="ListerEntredeux" layoutX="730.0" layoutY="758.0" mnemonicParsing="false" onAction="#filtrer" prefHeight="39.0" prefWidth="183.0" text="ListerEntredeux">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Button>
+      <Label alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="5.0" layoutY="28.0" prefHeight="21.0" prefWidth="77.0" text="Matricule" textFill="#1c4fb5">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label alignment="TOP_CENTER" layoutX="-15.0" layoutY="69.0" prefHeight="21.0" prefWidth="97.0" text="Nom" textFill="#1d5697">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <Label alignment="TOP_CENTER" layoutX="-5.0" layoutY="110.0" prefHeight="18.0" prefWidth="77.0" text="Email" textFill="#2730d7">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <Label layoutX="15.0" layoutY="221.0" prefHeight="32.0" prefWidth="76.0" text="Categorie" textFill="#1d32bc">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="matricule" layoutX="112.0" layoutY="24.0" prefHeight="28.0" prefWidth="283.0" />
+      <Label layoutX="15.0" layoutY="146.0" prefHeight="18.0" prefWidth="87.0" text="valeurSupp" textFill="#2340c3">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="nom" layoutX="112.0" layoutY="67.0" prefHeight="28.0" prefWidth="283.0" />
+      <TextField fx:id="email" layoutX="112.0" layoutY="105.0" prefHeight="28.0" prefWidth="283.0" />
+      <TextField fx:id="valeursup" layoutX="112.0" layoutY="141.0" prefHeight="28.0" prefWidth="283.0" />
+      <Label alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="248.0" layoutY="1.0" prefHeight="27.0" prefWidth="440.0" text="Gestion d'entreprise" textFill="#a82525">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font></Label>
+      <TextField fx:id="Date" layoutX="112.0" layoutY="180.0" prefHeight="28.0" prefWidth="283.0" />
+      <Label layoutX="14.0" layoutY="185.0" prefHeight="18.0" prefWidth="40.0" text="Date" textFill="#1f1fe1">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <ChoiceBox fx:id="ch" layoutX="112.0" layoutY="221.0" prefHeight="28.0" prefWidth="283.0" />
+      <TableView fx:id="tableauCat" layoutX="799.0" layoutY="293.0" prefHeight="385.0" prefWidth="141.0">
+         <columns>
+            <TableColumn fx:id="colCategorie" prefWidth="138.0" text="Categorie" />
+         </columns>
+      </TableView>
+      <Button fx:id="listerLesVendeurs" layoutX="440.0" layoutY="758.0" mnemonicParsing="false" onAction="#listerLesVendeurs" text="Lister les vendeurs" textFill="#d718a4">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <TextField fx:id="minimum" layoutX="607.0" layoutY="40.0" prefHeight="28.0" prefWidth="283.0" />
+      <TextField fx:id="maximum" layoutX="607.0" layoutY="95.0" prefHeight="28.0" prefWidth="283.0" />
+      <Label alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="492.0" layoutY="45.0" prefHeight="21.0" prefWidth="77.0" text="Minimum" textFill="#c32727">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="492.0" layoutY="100.0" prefHeight="21.0" prefWidth="77.0" text="Maximum" textFill="#d71d1d">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="Lister" layoutX="42.0" layoutY="817.0" mnemonicParsing="false" onAction="#Lister" prefHeight="31.0" prefWidth="126.0" text="Lister" textFill="#6ec38a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Button fx:id="Exporter" layoutX="783.0" layoutY="817.0" mnemonicParsing="false" onAction="#exporter" prefHeight="31.0" prefWidth="178.0" text="Exporter" textFill="#610909">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
